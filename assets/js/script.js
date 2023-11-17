@@ -26,7 +26,7 @@ let items = [
 ];
 
 /*
-* Game time and moves count
+* Game time generator
 */
 let seconds = 0,
 minutes = 0;
@@ -41,4 +41,12 @@ let timeGenerator = () => {
 let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
 let minutesValues = minutes < 10 ? `0${minutes}` : minutes;
 timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+};
+
+/*
+* Moves calculator
+*/
+let movesCounter = () => {
+    movesCount += 1;
+    moves.innerHTML = `<span>Moves:</span>${movesCount}`;
 };
